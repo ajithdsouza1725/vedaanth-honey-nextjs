@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-honey: #FFB000;
+  --color-honey-bright: #FFB900;
+  --color-honey-amber: #B9680A;
+  --color-honey-gold: #F3BE46;
+  --color-cream: #FFF9F0;
+  --color-cream-dark: #F2EDE0;
+  --color-dark: #171717;
+  --color-dark-text: #111111;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #ffffff;
 }
+
+/* ── Custom selection ─────────────── */
+::selection {
+  background: rgba(255, 176, 0, 0.25);
+  color: #111;
+}
+
+/* ── Heading font ─────────────────── */
+.font-heading {
+  font-family: var(--font-heading), "Bebas Neue", "Anton", sans-serif;
+}
+
+/* ── Section separator drip ───────── */
+.honey-drip-divider {
+  position: relative;
+}
+.honey-drip-divider::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 30'%3E%3Cpath fill='%23ffffff' d='M0 0 Q120 0 180 12 Q210 30 240 12 Q300 0 480 0 Q600 0 660 8 Q690 22 720 8 Q780 0 960 0 Q1080 0 1140 10 Q1170 28 1200 10 Q1260 0 1440 0 V30 H0Z'/%3E%3C/svg%3E") no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+/* ── Smooth card elevation ────────── */
+.card-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Glass effect ─────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* ── Golden gradient text ─────────── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFB900 0%, #FFB000 50%, #B9680A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Smooth button shine ──────────── */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.6s;
+}
+.btn-shine:hover::after {
+  left: 125%;
+}
+
+/* ── Scrollbar ────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFB000;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B9680A;
+}
+
+/* ── Focus ring for premium feel ─── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #FFB000;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Honeycomb grid pattern ───────── */
+.honeycomb-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23FFB000' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23FFB000' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* ── Premium section transitions ─── */
+section {
+  will-change: transform;
+}
+
+/* ── Smooth image reveal ─────────── */
+img {
+  transition: opacity 0.5s ease;
+}
+

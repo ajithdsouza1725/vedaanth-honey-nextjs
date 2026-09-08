@@ -85,12 +85,12 @@ export default function WhyChooseUs() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <FadeUp className="text-center mb-8">
-          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-bold text-black tracking-wide">
+          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-black tracking-wide">
             WHY FAMILIES CHOOSE US
           </h2>
         </FadeUp>
 
-        <StaggerContainer className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4 md:gap-5">
+        <StaggerContainer className="grid grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4 md:gap-5">
           {features.map((f) => (
             <StaggerChild key={f.title}>
               <motion.div

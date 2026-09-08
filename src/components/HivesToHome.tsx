@@ -60,7 +60,7 @@ export default function HivesToHome() {
           {/* Left — Heading & CTA */}
           <SlideLeft className="w-full md:w-[280px] shrink-0">
             <div className="bg-white/90 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none rounded-2xl md:rounded-none p-5 md:p-0">
-              <h2 className="font-heading text-[26px] md:text-[34px] lg:text-[40px] font-bold text-black leading-tight text-center md:text-left">
+              <h2 className="font-heading text-[26px] md:text-[34px] lg:text-[40px] font-extrabold text-black leading-tight text-center md:text-left">
                 FROM OUR
                 <br />
                 <span className="text-honey">HIVES</span>{" "}

@@ -9,19 +9,19 @@ const tips = [
   {
     title: "BENEFITS OF RAW HONEY",
     excerpt: "Unpasteurized, unprocessed & unfiltered — discover why raw honey is a superfood.",
-    img: "/images/logo/banner.png",
+    img: "/images/blog-benefits.jpg",
     imgMobile: "/images/mobile/blog-benefits-mobile.webp",
   },
   {
     title: "HOW TO USE HONEY",
     excerpt: "Simple ways to add pure multifloral honey to your daily routine.",
-    img: "/images/logo/logo-yellow-bg.png",
+    img: "/images/blog-recipes.jpg",
     imgMobile: "/images/mobile/blog-recipes-mobile.webp",
   },
   {
     title: "HONEY & IMMUNITY",
     excerpt: "Boost your immunity naturally with zero added sugar raw honey.",
-    img: "/images/logo/jar-front-dark.png",
+    img: "/images/blog-immunity.jpg",
     imgMobile: "/images/mobile/blog-immunity-mobile.webp",
   },
 ];
@@ -45,7 +45,7 @@ export default function HoneyTips() {
           {/* Mobile: warm gradient underlay */}
           <div className="md:hidden absolute inset-0 mobile-glow-bg pointer-events-none rounded-none" />
           <div className="md:hidden absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-honey/30 to-transparent" />
-          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[38px] font-bold text-black mb-4 sm:mb-6">
+          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[38px] font-extrabold text-black mb-4 sm:mb-6">
             HONEY TIPS & STORIES
           </h2>
 
@@ -102,7 +102,7 @@ export default function HoneyTips() {
               </svg>
             </div>
 
-            <h3 className="font-heading text-[24px] md:text-[28px] lg:text-[32px] font-bold text-black leading-tight mb-4">
+            <h3 className="font-heading text-[24px] md:text-[28px] lg:text-[32px] font-extrabold text-black leading-tight mb-4">
               GET HONEY TIPS,
               <br />
               RECIPES & OFFERS

@@ -20,7 +20,7 @@ export default function OurHoney() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <FadeUp className="text-center mb-8">
-          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-bold text-black tracking-wide">
+          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-black tracking-wide">
             OUR RAW HONEY
           </h2>
           <p className="text-sm text-black/70 mt-3 font-medium">Unpasteurized · Unprocessed · Unfiltered · Multifloral Honey</p>
@@ -56,19 +56,20 @@ export default function OurHoney() {
                   </h3>
                   <p className="text-[10px] sm:text-[11px] text-black/70 mt-1">{p.weight} · {p.badge}</p>
                   <div className="flex items-center justify-between mt-2 sm:mt-3">
-                    <span className="text-lg sm:text-xl font-heading font-bold text-black">{p.price}</span>
-                    <motion.button
+                    <span className="text-lg sm:text-xl font-heading font-extrabold text-black">{p.price}</span>
+                    <motion.a
+                      href="#contact"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-8 h-8 sm:w-10 sm:h-10 bg-honey text-black rounded-full flex items-center justify-center hover:bg-honey-amber transition-colors shadow-md"
-                      aria-label={`Add ${p.name} to cart`}
+                      aria-label={`Order ${p.name}`}
                     >
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="9" cy="21" r="1" />
                         <circle cx="20" cy="21" r="1" />
                         <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
                       </svg>
-                    </motion.button>
+                    </motion.a>
                   </div>
                 </div>
               </motion.div>
@@ -78,7 +79,7 @@ export default function OurHoney() {
 
         <FadeUp delay={0.3} className="text-center mt-8">
           <a
-            href="#"
+            href="#shop"
             className="inline-flex items-center px-10 py-3.5 bg-white border-2 border-black text-black font-bold text-[13px] rounded-full hover:bg-honey hover:border-honey transition-all tracking-[0.12em]"
           >
             VIEW ALL PRODUCTS

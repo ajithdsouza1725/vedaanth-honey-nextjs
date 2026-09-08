@@ -22,7 +22,7 @@ export default function DeliverySection() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
         <FadeUp>
-          <h2 className="font-heading text-[20px] sm:text-[24px] md:text-[30px] lg:text-[38px] font-bold text-black tracking-wide max-w-2xl mx-auto px-2">
+          <h2 className="font-heading text-[20px] sm:text-[24px] md:text-[30px] lg:text-[38px] font-extrabold text-black tracking-wide max-w-2xl mx-auto px-2">
             FRESH RAW HONEY DELIVERED ACROSS BANGALORE
           </h2>
         </FadeUp>
@@ -46,13 +46,14 @@ export default function DeliverySection() {
         </StaggerContainer>
 
         <FadeUp delay={0.3} className="mt-6">
-          <motion.button
+          <motion.a
+            href="#contact"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255,176,0,0.3)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-3.5 bg-[#111] text-white font-bold text-xs rounded-full hover:bg-black transition-all tracking-[0.12em]"
+            className="inline-block px-10 py-3.5 bg-[#111] text-white font-bold text-xs rounded-full hover:bg-black transition-all tracking-[0.12em]"
           >
             CHECK DELIVERY IN YOUR AREA
-          </motion.button>
+          </motion.a>
         </FadeUp>
       </div>
 

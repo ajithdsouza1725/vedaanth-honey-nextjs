@@ -56,7 +56,7 @@ export default function HowToOrder() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <FadeUp className="text-center mb-6">
-          <h2 className="font-heading text-[24px] md:text-[30px] lg:text-[38px] font-bold text-black tracking-wide">
+          <h2 className="font-heading text-[24px] md:text-[30px] lg:text-[38px] font-extrabold text-black tracking-wide">
             HOW TO ORDER
           </h2>
         </FadeUp>

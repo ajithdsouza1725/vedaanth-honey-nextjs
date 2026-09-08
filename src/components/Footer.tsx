@@ -120,7 +120,7 @@ export default function Footer() {
       <div className="border-t border-honey/15">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-center">
           <p className="text-[11px] text-black/40">
-            &copy; 2024 Vedaanth Nectar Honey. All rights reserved.
+            &copy; {new Date().getFullYear()} Vedaanth Nectar Honey. All rights reserved.
           </p>
         </div>
       </div>

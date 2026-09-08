@@ -46,7 +46,7 @@ export default function OurStory() {
         <SlideLeft className="relative overflow-hidden bg-white md:bg-transparent">
           <div className="relative z-10 p-6 sm:p-8 md:p-12 lg:p-16 flex items-center">
             <div className="max-w-lg mx-auto md:ml-36 lg:ml-52 md:bg-transparent md:p-0 md:backdrop-blur-none md:shadow-none md:border-0">
-              <h2 className="font-heading text-[24px] sm:text-[28px] md:text-[34px] lg:text-[44px] font-bold text-black md:text-white mb-4 md:mb-6">
+              <h2 className="font-heading text-[24px] sm:text-[28px] md:text-[34px] lg:text-[44px] font-extrabold text-black md:text-white mb-4 md:mb-6">
                 <span className="text-honey">OUR</span> STORY
               </h2>
               <p className="text-black/70 md:text-gray-300 text-sm leading-[1.9] mb-4">
@@ -72,7 +72,7 @@ export default function OurStory() {
 
         {/* ── RIGHT: Testimonials ── */}
         <SlideRight className="bg-white md:bg-transparent p-5 sm:p-8 md:p-12 lg:p-16 pt-8 md:pt-10 flex flex-col justify-start border-t border-honey/10 md:border-t-0">
-          <h2 className="font-heading text-[22px] sm:text-[24px] md:text-[30px] lg:text-[34px] font-bold text-black mb-6 text-center">
+          <h2 className="font-heading text-[22px] sm:text-[24px] md:text-[30px] lg:text-[34px] font-extrabold text-black mb-6 text-center">
             WHAT OUR CUSTOMERS SAY
           </h2>
 
@@ -132,7 +132,7 @@ export default function OurStory() {
               <div className="hidden sm:block relative w-24 h-28 shrink-0 rounded-2xl overflow-hidden opacity-80">
                 <Image
                   src="/images/logo/icon-dark.png"
-                  alt="Honey dipper"
+                  alt=""
                   fill
                   className="object-contain"
                   sizes="96px"

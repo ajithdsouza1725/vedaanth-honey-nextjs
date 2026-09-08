@@ -8,18 +8,21 @@ import { SlideLeft, SlideRight, StaggerContainer, StaggerChild } from "./animati
 const tips = [
   {
     title: "BENEFITS OF RAW HONEY",
-    excerpt: "Discover why raw honey is a superfood for your health.",
-    img: "/images/blog-benefits.jpg",
+    excerpt: "Unpasteurized, unprocessed & unfiltered — discover why raw honey is a superfood.",
+    img: "/images/logo/banner.png",
+    imgMobile: "/images/mobile/blog-benefits-mobile.webp",
   },
   {
     title: "HOW TO USE HONEY",
-    excerpt: "Simple ways to add honey to your daily routine.",
-    img: "/images/blog-recipes.jpg",
+    excerpt: "Simple ways to add pure multifloral honey to your daily routine.",
+    img: "/images/logo/logo-yellow-bg.png",
+    imgMobile: "/images/mobile/blog-recipes-mobile.webp",
   },
   {
     title: "HONEY & IMMUNITY",
-    excerpt: "Boost your immunity naturally with raw honey.",
-    img: "/images/blog-immunity.jpg",
+    excerpt: "Boost your immunity naturally with zero added sugar raw honey.",
+    img: "/images/logo/jar-front-dark.png",
+    imgMobile: "/images/mobile/blog-immunity-mobile.webp",
   },
 ];
 
@@ -36,24 +39,36 @@ export default function HoneyTips() {
 
   return (
     <section className="relative" id="tips">
-      <div className="grid lg:grid-cols-[1.4fr_0.6fr]">
+      <div className="flex flex-col lg:grid lg:grid-cols-[1.4fr_0.6fr]">
         {/* ── LEFT: Blog tips ── */}
-        <SlideLeft className="bg-white p-8 md:p-10 lg:p-12">
-          <h2 className="font-heading text-[28px] md:text-[34px] lg:text-[38px] font-bold text-black mb-6">
+        <SlideLeft className="bg-white p-5 sm:p-8 md:p-10 lg:p-12 relative">
+          {/* Mobile: warm gradient underlay */}
+          <div className="md:hidden absolute inset-0 mobile-glow-bg pointer-events-none rounded-none" />
+          <div className="md:hidden absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-honey/30 to-transparent" />
+          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[38px] font-bold text-black mb-4 sm:mb-6">
             HONEY TIPS & STORIES
           </h2>
 
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {tips.map((tip) => (
               <StaggerChild key={tip.title}>
                 <article className="group cursor-pointer">
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-4">
+                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-3 sm:mb-4 shadow-md md:shadow-none">
+                    {/* Mobile image */}
+                    <Image
+                      src={tip.imgMobile}
+                      alt={tip.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500 md:hidden"
+                      sizes="100vw"
+                    />
+                    {/* Desktop image */}
                     <Image
                       src={tip.img}
                       alt={tip.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 640px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500 hidden md:block"
+                      sizes="33vw"
                     />
                   </div>
                   <h3 className="font-bold text-xs text-black tracking-widest mb-2 group-hover:text-honey transition-colors">
@@ -75,7 +90,7 @@ export default function HoneyTips() {
         </SlideLeft>
 
         {/* ── RIGHT: Newsletter (honey bg) ── */}
-        <SlideRight className="bg-honey p-8 md:p-12 lg:p-14 flex flex-col justify-center relative overflow-hidden">
+        <SlideRight className="bg-honey p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-center relative overflow-hidden">
           <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/10 rounded-full" />
           <div className="absolute bottom-6 right-6 w-20 h-20 bg-white/10 rounded-full" />
 

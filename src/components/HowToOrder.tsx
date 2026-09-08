@@ -52,15 +52,16 @@ const steps = [
 
 export default function HowToOrder() {
   return (
-    <section className="py-8 md:py-10 bg-honey/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-8 md:py-10 bg-honey/5 relative overflow-hidden">
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <FadeUp className="text-center mb-6">
           <h2 className="font-heading text-[24px] md:text-[30px] lg:text-[38px] font-bold text-black tracking-wide">
             HOW TO ORDER
           </h2>
         </FadeUp>
 
-        <div className="bg-white rounded-3xl p-8 md:p-12 max-w-5xl mx-auto shadow-sm border border-honey/15">
+        <div className="bg-white rounded-3xl p-4 sm:p-8 md:p-12 max-w-5xl mx-auto shadow-md border border-honey/20">
           <StaggerContainer className="flex flex-col md:flex-row items-center justify-center gap-2">
             {steps.map((s, i) => (
               <div key={s.num} className="flex items-center">

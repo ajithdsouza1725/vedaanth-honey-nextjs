@@ -7,9 +7,9 @@ import { BrandLogo } from "./Logo";
 export default function Footer() {
   return (
     <footer className="bg-honey/5 text-black/60" id="contact">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <FadeUp>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <div className="mb-5">

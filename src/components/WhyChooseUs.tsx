@@ -79,31 +79,32 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <section className="py-8 md:py-10 relative overflow-hidden" id="why">
+      {/* Mobile decorative blobs (subtle — parent has section-bg-2 image) */}
+      <div className="md:hidden absolute top-6 -left-8 w-32 h-32 rounded-full bg-white/20 blur-2xl animate-float-blob pointer-events-none" />
+      <div className="md:hidden absolute bottom-10 -right-6 w-28 h-28 rounded-full bg-white/15 blur-2xl animate-float-blob-reverse pointer-events-none" />
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <FadeUp className="text-center mb-8">
-          <h2 className="font-heading text-[28px] md:text-[34px] lg:text-[40px] font-bold text-black tracking-wide">
+          <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-bold text-black tracking-wide">
             WHY FAMILIES CHOOSE US
           </h2>
         </FadeUp>
 
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
+        <StaggerContainer className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4 md:gap-5">
           {features.map((f) => (
             <StaggerChild key={f.title}>
               <motion.div
                 whileHover={{ y: -6, boxShadow: "0 12px 40px rgba(255,176,0,0.15)" }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="bg-white rounded-2xl p-5 md:p-6 text-center group cursor-pointer border border-honey/15 h-full hover:border-honey/40"
+                className="bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-5 md:p-6 text-center group cursor-pointer border border-honey/15 h-full hover:border-honey/40"
               >
-                <motion.div
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  className="flex items-center justify-center mb-4"
-                >
+                <div className="flex items-center justify-center mb-2 sm:mb-4 [&>svg]:w-8 [&>svg]:h-8 sm:[&>svg]:w-11 sm:[&>svg]:h-11">
                   {f.icon}
-                </motion.div>
-                <h3 className="font-bold text-[11px] md:text-xs text-black mb-2 tracking-[0.1em] leading-tight">
+                </div>
+                <h3 className="font-bold text-[9px] sm:text-[11px] md:text-xs text-black mb-1 sm:mb-2 tracking-[0.08em] leading-tight">
                   {f.title}
                 </h3>
-                <p className="text-[11px] text-black/70 leading-relaxed">
+                <p className="text-[9px] sm:text-[11px] text-black/70 leading-snug sm:leading-relaxed hidden sm:block">
                   {f.desc}
                 </p>
               </motion.div>

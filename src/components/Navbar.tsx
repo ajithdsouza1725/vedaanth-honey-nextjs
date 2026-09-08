@@ -35,11 +35,12 @@ export default function Navbar() {
       }`}
       id="top"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-[76px] items-center justify-between">
+      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+        <div className="flex h-[60px] md:h-[76px] items-center justify-between">
           {/* Logo */}
-          <Link href="#top" className="group">
-            <BrandLogo variant="dark" iconSize={36} />
+          <Link href="#top" className="group shrink-0">
+            <BrandLogo variant="dark" iconSize={36} className="md:hidden" />
+            <BrandLogo variant="dark" iconSize={56} className="hidden md:block" />
           </Link>
 
           {/* Desktop Nav */}
@@ -59,35 +60,39 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Right side */}
+          {/* Desktop right side */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="p-2 text-black/60 hover:text-honey transition-colors">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-              </svg>
-            </button>
-            <button className="relative p-2 text-black/60 hover:text-honey transition-colors">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
-              </svg>
-            </button>
             <a
               href="#shop"
-              className="ml-2 px-7 py-3 bg-honey text-black text-[14px] font-bold rounded-full hover:bg-honey-amber transition-colors tracking-wider btn-shine"
+              className="px-7 py-3 bg-honey text-black text-[14px] font-bold rounded-full hover:bg-honey-amber transition-colors tracking-wider btn-shine"
             >
               SHOP NOW
             </a>
           </div>
 
-          {/* Hamburger */}
-          <button className="lg:hidden p-2 text-black" onClick={() => setMobileOpen(!mobileOpen)}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileOpen
-                ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
-            </svg>
-          </button>
+          {/* Mobile right icons */}
+          <div className="lg:hidden flex items-center gap-0.5">
+            <a href="#shop" className="p-1.5 text-black/70 hover:text-honey transition-colors" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4.35-4.35" />
+              </svg>
+            </a>
+            <a href="#shop" className="p-1.5 text-black/70 hover:text-honey transition-colors" aria-label="Cart">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
+              </svg>
+            </a>
+            <button className="p-1.5 text-black ml-0.5" onClick={() => setMobileOpen(!mobileOpen)}>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileOpen
+                  ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 

@@ -51,26 +51,31 @@ export default function StatsBar() {
 
   return (
     <section className="relative bg-honey overflow-hidden">
+      {/* Mobile: honeycomb texture overlay + glow accents */}
+      <div className="md:hidden absolute inset-0 honeycomb-bg opacity-40 pointer-events-none" />
+      <div className="md:hidden absolute -top-4 left-1/4 w-24 h-24 rounded-full bg-white/15 blur-2xl pointer-events-none" />
+      <div className="md:hidden absolute bottom-0 right-1/4 w-20 h-20 rounded-full bg-white/10 blur-xl pointer-events-none" />
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-7 md:py-9">
         <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {stats.map((stat, i) => (
             <StaggerChild
               key={stat.label}
-              className={`flex items-center justify-center gap-4 py-3 ${
+              className={`flex items-center justify-center gap-2 sm:gap-4 py-2 sm:py-3 ${
                 i > 0 ? "md:border-l md:border-black/15" : ""
               }`}
             >
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="w-13 h-13 md:w-14.5 md:h-14.5 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm"
+                className="w-10 h-10 sm:w-13 sm:h-13 md:w-14.5 md:h-14.5 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm"
               >
                 {stat.icon}
               </motion.div>
               <div>
-                <strong className="text-[26px] md:text-[32px] font-heading text-black block leading-tight tracking-wide">
+                <strong className="text-[18px] sm:text-[26px] md:text-[32px] font-heading text-black block leading-tight tracking-wide">
                   {stat.num}
                 </strong>
-                <span className="text-[11px] md:text-[13px] text-black/70 font-medium">
+                <span className="text-[9px] sm:text-[11px] md:text-[13px] text-black/70 font-medium">
                   {stat.label}
                 </span>
               </div>

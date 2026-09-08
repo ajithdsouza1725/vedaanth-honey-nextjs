@@ -17,7 +17,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "The forest honey is incredible. You can taste the difference from store-bought.",
+    text: "The raw multifloral honey is incredible. You can taste the difference from store-bought.",
     name: "Anjali D.",
     rating: 5,
   },
@@ -41,22 +41,21 @@ export default function OurStory() {
 
   return (
     <section className="relative" id="story">
-      <div className="grid md:grid-cols-2">
+      <div className="flex flex-col md:grid md:grid-cols-2">
         {/* ── LEFT: Our Story ── */}
-        <SlideLeft className="relative overflow-hidden">
-          <div className="relative z-10 p-8 md:p-12 lg:p-16 flex items-center min-h-95">
-            <div className="max-w-sm ml-auto md:ml-36 lg:ml-52">
-              <h2 className="font-heading text-[28px] md:text-[34px] lg:text-[44px] font-bold text-white mb-6">
+        <SlideLeft className="relative overflow-hidden bg-white md:bg-transparent">
+          <div className="relative z-10 p-6 sm:p-8 md:p-12 lg:p-16 flex items-center">
+            <div className="max-w-lg mx-auto md:ml-36 lg:ml-52 md:bg-transparent md:p-0 md:backdrop-blur-none md:shadow-none md:border-0">
+              <h2 className="font-heading text-[24px] sm:text-[28px] md:text-[34px] lg:text-[44px] font-bold text-black md:text-white mb-4 md:mb-6">
                 <span className="text-honey">OUR</span> STORY
               </h2>
-              <p className="text-gray-300 text-sm leading-[1.9] mb-4">
+              <p className="text-black/70 md:text-gray-300 text-sm leading-[1.9] mb-4">
                 Vedaanth Nectar Honey was born out of a passion for pure, natural
-                living. What started with a few hives in our backyard has grown
-                into a mission to bring you the finest raw honey from nature&apos;s
-                own goodness.
+                living. Our raw honey is unpasteurized, unprocessed &amp; unfiltered
+                — with zero added sugar. FSSAI certified and made in India.
               </p>
-              <p className="text-gray-300 text-sm leading-[1.9] mb-8">
-                Thank you for being a part of our journey.
+              <p className="text-black/70 md:text-gray-300 text-sm leading-[1.9] mb-6 md:mb-8">
+                From our hives to your home — thank you for being a part of our journey.
               </p>
               <a
                 href="#contact"
@@ -72,8 +71,8 @@ export default function OurStory() {
         </SlideLeft>
 
         {/* ── RIGHT: Testimonials ── */}
-        <SlideRight className="p-8 md:p-12 lg:p-16 pt-8 md:pt-10 flex flex-col justify-start">
-          <h2 className="font-heading text-[24px] md:text-[30px] lg:text-[34px] font-bold text-black mb-6 text-center">
+        <SlideRight className="bg-white md:bg-transparent p-5 sm:p-8 md:p-12 lg:p-16 pt-8 md:pt-10 flex flex-col justify-start border-t border-honey/10 md:border-t-0">
+          <h2 className="font-heading text-[22px] sm:text-[24px] md:text-[30px] lg:text-[34px] font-bold text-black mb-6 text-center">
             WHAT OUR CUSTOMERS SAY
           </h2>
 
@@ -81,7 +80,7 @@ export default function OurStory() {
             {/* Nav arrows */}
             <button
               onClick={() => go((current - 1 + testimonials.length) % testimonials.length)}
-              className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-honey/30 text-black/40 flex items-center justify-center hover:border-honey hover:text-honey transition-all"
+              className="absolute -left-2 sm:-left-4 md:-left-12 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-honey/30 text-black/40 flex items-center justify-center hover:border-honey hover:text-honey transition-all z-10"
               aria-label="Previous testimonial"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -90,7 +89,7 @@ export default function OurStory() {
             </button>
             <button
               onClick={() => go((current + 1) % testimonials.length)}
-              className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-honey/30 text-black/40 flex items-center justify-center hover:border-honey hover:text-honey transition-all"
+              className="absolute -right-2 sm:-right-4 md:-right-12 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-honey/30 text-black/40 flex items-center justify-center hover:border-honey hover:text-honey transition-all z-10"
               aria-label="Next testimonial"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -99,7 +98,7 @@ export default function OurStory() {
             </button>
 
             {/* Testimonial card */}
-            <div className="flex items-center gap-6 px-8 min-h-45">
+            <div className="flex items-center gap-4 sm:gap-6 px-4 sm:px-8 min-h-40 sm:min-h-45">
               <div className="flex-1">
                 <AnimatePresence mode="wait" custom={dir}>
                   <motion.div
@@ -132,10 +131,10 @@ export default function OurStory() {
               {/* Decorative honey image */}
               <div className="hidden sm:block relative w-24 h-28 shrink-0 rounded-2xl overflow-hidden opacity-80">
                 <Image
-                  src="/images/honey-dipper.jpg"
+                  src="/images/logo/icon-dark.png"
                   alt="Honey dipper"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="96px"
                 />
               </div>

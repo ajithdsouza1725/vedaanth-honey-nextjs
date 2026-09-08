@@ -56,11 +56,11 @@ export default function HivesToHome() {
   return (
     <section className="py-8 md:py-10 relative overflow-hidden" id="hives">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-start gap-4 lg:gap-5">
+        <div className="flex flex-col items-center md:flex-row md:items-start gap-4 md:gap-4 lg:gap-5">
           {/* Left — Heading & CTA */}
-          <SlideLeft className="md:w-[280px] shrink-0">
-            <div>
-              <h2 className="font-heading text-[28px] md:text-[34px] lg:text-[40px] font-bold text-black leading-tight">
+          <SlideLeft className="w-full md:w-[280px] shrink-0">
+            <div className="bg-white/90 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none rounded-2xl md:rounded-none p-5 md:p-0">
+              <h2 className="font-heading text-[26px] md:text-[34px] lg:text-[40px] font-bold text-black leading-tight text-center md:text-left">
                 FROM OUR
                 <br />
                 <span className="text-honey">HIVES</span>{" "}
@@ -68,21 +68,24 @@ export default function HivesToHome() {
                 <br />
                 YOUR HOME
               </h2>
-              <p className="mt-1 text-sm text-black/70 leading-relaxed max-w-xs">
+              <p className="mt-1 text-sm text-black/70 leading-relaxed max-w-xs text-center md:text-left mx-auto md:mx-0">
                 We follow sustainable beekeeping practices to ensure the highest
                 quality honey while protecting our bees and nature.
               </p>
+              <div className="text-center md:text-left">
               <a
                 href="#story"
-                className="inline-block mt-2 px-7 py-3 bg-white border-2 border-black text-black font-bold text-xs rounded-full hover:bg-honey hover:border-honey transition-colors tracking-[0.12em]"
+                className="inline-block mt-3 px-7 py-3 bg-white border-2 border-black text-black font-bold text-xs rounded-full hover:bg-honey hover:border-honey transition-colors tracking-[0.12em]"
               >
                 KNOW MORE
               </a>
+              </div>
             </div>
           </SlideLeft>
 
           {/* Right — Process steps */}
-          <FadeUp delay={0.15} className="flex-1 pt-6 md:pt-10">
+          <FadeUp delay={0.1} className="flex-1 w-full pt-0 md:pt-10">
+            <div className="bg-white/80 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none rounded-2xl md:rounded-none p-4 md:p-0">
             <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-3">
               {steps.map((s, i) => (
                 <StaggerChild key={i}>
@@ -94,13 +97,14 @@ export default function HivesToHome() {
                     >
                       {s.icon}
                     </motion.div>
-                    <p className="text-[11px] md:text-xs text-black/70 leading-relaxed max-w-[120px] mx-auto">
+                    <p className="text-[11px] md:text-xs text-black/80 leading-relaxed max-w-[120px] mx-auto">
                       {s.desc}
                     </p>
                   </div>
                 </StaggerChild>
               ))}
             </StaggerContainer>
+            </div>
           </FadeUp>
         </div>
       </div>

@@ -17,9 +17,12 @@ const areas = [
 export default function DeliverySection() {
   return (
     <section className="py-8 md:py-10 bg-white relative overflow-hidden" id="delivery">
+      {/* Mobile: subtle warm bg */}
+      <div className="md:hidden absolute inset-0 bg-gradient-to-b from-white via-[#FFF8ED] to-white pointer-events-none" />
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
         <FadeUp>
-          <h2 className="font-heading text-[24px] md:text-[30px] lg:text-[38px] font-bold text-black tracking-wide max-w-2xl mx-auto">
+          <h2 className="font-heading text-[20px] sm:text-[24px] md:text-[30px] lg:text-[38px] font-bold text-black tracking-wide max-w-2xl mx-auto px-2">
             FRESH RAW HONEY DELIVERED ACROSS BANGALORE
           </h2>
         </FadeUp>
@@ -53,8 +56,8 @@ export default function DeliverySection() {
         </FadeUp>
       </div>
 
-      {/* Bangalore skyline silhouette */}
-      <div className="mt-6 relative">
+      {/* Bangalore skyline silhouette — desktop only */}
+      <div className="mt-6 relative hidden md:block">
         <svg viewBox="0 0 1440 120" width="100%" height="120" preserveAspectRatio="none" className="block">
           <path
             d="M0 120 L0 80 L30 80 L30 65 L50 65 L50 55 L55 45 L60 35 L65 45 L70 55 L80 55 L80 60 L100 60 L100 50 L110 50 L110 35 L115 25 L120 35 L125 50 L140 50 L140 70 L170 70 L170 55 L185 55 L185 45 L190 30 L195 20 L200 30 L205 45 L215 45 L215 60 L240 60 L240 70 L280 70 L280 55 L290 55 L290 45 L295 35 L300 25 L305 35 L310 45 L320 45 L320 65 L360 65 L360 70 L400 70 L400 60 L415 60 L415 40 L420 25 L425 15 L430 25 L435 40 L445 40 L445 55 L460 55 L460 65 L500 65 L500 75 L540 75 L540 60 L555 60 L555 50 L560 35 L565 25 L570 35 L575 50 L585 50 L585 65 L620 65 L620 75 L660 75 L660 60 L675 60 L675 45 L680 30 L685 18 L690 30 L695 45 L705 45 L705 60 L730 60 L730 70 L770 70 L770 55 L785 55 L785 40 L790 28 L795 18 L800 28 L805 40 L815 40 L815 55 L840 55 L840 65 L880 65 L880 75 L920 75 L920 60 L935 60 L935 45 L940 30 L945 20 L950 30 L955 45 L965 45 L965 65 L1000 65 L1000 70 L1040 70 L1040 55 L1055 55 L1055 40 L1060 28 L1065 18 L1070 28 L1075 40 L1085 40 L1085 60 L1120 60 L1120 70 L1160 70 L1160 55 L1175 55 L1175 45 L1180 35 L1185 25 L1190 35 L1195 45 L1205 45 L1205 60 L1240 60 L1240 65 L1280 65 L1280 75 L1320 75 L1320 60 L1340 60 L1340 50 L1345 40 L1350 30 L1355 40 L1360 50 L1370 50 L1370 65 L1400 65 L1400 75 L1440 75 L1440 120 Z"

@@ -9,7 +9,7 @@ const snappyEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 /* ── Fade-up on scroll ─────────────────────────── */
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 50, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
 };
 
@@ -27,8 +27,8 @@ export function FadeUp({
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: snappyEase }}
+      viewport={{ once: true, margin: "0px" }}
+      transition={{ duration: 0.5, delay, ease: snappyEase }}
       className={className}
     >
       {children}
@@ -56,8 +56,8 @@ export function FadeIn({
       variants={fadeIn}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.6, delay, ease: snappyEase }}
+      viewport={{ once: true, margin: "0px" }}
+      transition={{ duration: 0.5, delay, ease: snappyEase }}
       className={className}
     >
       {children}
@@ -67,7 +67,7 @@ export function FadeIn({
 
 /* ── Slide from left ──────────────────────────── */
 const slideLeft: Variants = {
-  hidden: { opacity: 0, x: -80, filter: "blur(6px)" },
+  hidden: { opacity: 0, x: -40, filter: "blur(4px)" },
   visible: { opacity: 1, x: 0, filter: "blur(0px)" },
 };
 
@@ -85,8 +85,8 @@ export function SlideLeft({
       variants={slideLeft}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8, delay, ease: snappyEase }}
+      viewport={{ once: true, margin: "0px" }}
+      transition={{ duration: 0.6, delay, ease: snappyEase }}
       className={className}
     >
       {children}
@@ -96,7 +96,7 @@ export function SlideLeft({
 
 /* ── Slide from right ─────────────────────────── */
 const slideRight: Variants = {
-  hidden: { opacity: 0, x: 80, filter: "blur(6px)" },
+  hidden: { opacity: 0, x: 40, filter: "blur(4px)" },
   visible: { opacity: 1, x: 0, filter: "blur(0px)" },
 };
 
@@ -114,8 +114,8 @@ export function SlideRight({
       variants={slideRight}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8, delay, ease: snappyEase }}
+      viewport={{ once: true, margin: "0px" }}
+      transition={{ duration: 0.6, delay, ease: snappyEase }}
       className={className}
     >
       {children}
@@ -143,8 +143,8 @@ export function ScaleUp({
       variants={scaleUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.6, delay, ...smoothSpring }}
+      viewport={{ once: true, margin: "0px" }}
+      transition={{ duration: 0.5, delay, ...smoothSpring }}
       className={className}
     >
       {children}
@@ -155,7 +155,7 @@ export function ScaleUp({
 /* ── Stagger container ────────────────────────── */
 const stagger: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 };
 
 export function StaggerContainer({
@@ -170,7 +170,7 @@ export function StaggerContainer({
       variants={stagger}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "0px" }}
       className={className}
     >
       {children}
@@ -180,12 +180,12 @@ export function StaggerContainer({
 
 /* ── Stagger child (pair with StaggerContainer) ── */
 const staggerChild: Variants = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  hidden: { opacity: 0, y: 20, scale: 0.97 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: snappyEase as [number, number, number, number] },
+    transition: { duration: 0.4, ease: snappyEase as [number, number, number, number] },
   },
 };
 
@@ -294,8 +294,8 @@ export function RotateIn({
       variants={rotateIn}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7, delay, ...smoothSpring }}
+      viewport={{ once: true, margin: "0px" }}
+      transition={{ duration: 0.5, delay, ...smoothSpring }}
       className={className}
     >
       {children}

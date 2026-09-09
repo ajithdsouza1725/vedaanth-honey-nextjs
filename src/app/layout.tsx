@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${manrope.variable} antialiased`}>
+    <html lang="en" className={`${manrope.variable} antialiased overflow-x-hidden`}>
       <body className="min-h-screen font-[family-name:var(--font-manrope)] overflow-x-hidden">
         {children}
       </body>

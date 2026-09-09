@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden" id="home">
       {/* ── Mobile layout ── */}
-      <div className="md:hidden relative" style={{ aspectRatio: "9/12" }}>
+      <div className="md:hidden relative min-h-screen">
         {/* Background image — fills entire section, no distortion */}
         <div
           className="absolute inset-0 z-0"

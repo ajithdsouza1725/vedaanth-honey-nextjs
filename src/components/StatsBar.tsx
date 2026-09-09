@@ -51,11 +51,6 @@ export default function StatsBar() {
 
   return (
     <section className="relative bg-honey overflow-hidden">
-      {/* Mobile: honeycomb texture overlay + glow accents */}
-      <div className="md:hidden absolute inset-0 honeycomb-bg opacity-40 pointer-events-none" />
-      <div className="md:hidden absolute -top-4 left-1/4 w-24 h-24 rounded-full bg-white/15 blur-2xl pointer-events-none" />
-      <div className="md:hidden absolute bottom-0 right-1/4 w-20 h-20 rounded-full bg-white/10 blur-xl pointer-events-none" />
-
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-7 md:py-9">
         <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {stats.map((stat, i) => (

@@ -79,9 +79,6 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <section className="py-8 md:py-10 relative overflow-hidden" id="why">
-      {/* Mobile decorative blobs (subtle — parent has section-bg-2 image) */}
-      <div className="md:hidden absolute top-6 -left-8 w-32 h-32 rounded-full bg-white/20 blur-2xl animate-float-blob pointer-events-none" />
-      <div className="md:hidden absolute bottom-10 -right-6 w-28 h-28 rounded-full bg-white/15 blur-2xl animate-float-blob-reverse pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <FadeUp className="text-center mb-8">

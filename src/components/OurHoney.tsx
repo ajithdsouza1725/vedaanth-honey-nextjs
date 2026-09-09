@@ -14,9 +14,6 @@ const products = [
 export default function OurHoney() {
   return (
     <section className="py-8 md:py-10 relative overflow-hidden" id="shop">
-      {/* Mobile: subtle accents (parent has section-bg-2 image) */}
-      <div className="md:hidden absolute -top-4 right-0 w-20 h-20 rounded-full bg-white/20 blur-xl animate-float-blob pointer-events-none" />
-      <div className="md:hidden absolute bottom-8 -left-4 w-24 h-24 rounded-full bg-white/15 blur-2xl animate-float-blob-reverse pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <FadeUp className="text-center mb-8">

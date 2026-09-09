@@ -18,7 +18,7 @@ export default function DeliverySection() {
   return (
     <section className="py-8 md:py-10 bg-white relative overflow-hidden" id="delivery">
       {/* Mobile: subtle warm bg */}
-      <div className="md:hidden absolute inset-0 bg-gradient-to-b from-white via-[#FFF8ED] to-white pointer-events-none" />
+      <div className="md:hidden absolute inset-0 bg-gradient-to-b from-white via-cream to-white pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
         <FadeUp>

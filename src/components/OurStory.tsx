@@ -98,7 +98,7 @@ export default function OurStory() {
             </button>
 
             {/* Testimonial card */}
-            <div className="flex items-center gap-4 sm:gap-6 px-4 sm:px-8 min-h-40 sm:min-h-45">
+            <div className="flex items-center gap-4 sm:gap-6 px-4 sm:px-8 min-h-40 sm:min-h-[180px]">
               <div className="flex-1">
                 <AnimatePresence mode="wait" custom={dir}>
                   <motion.div

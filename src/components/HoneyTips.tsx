@@ -52,7 +52,7 @@ export default function HoneyTips() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {tips.map((tip) => (
               <StaggerChild key={tip.title}>
-                <article className="group cursor-pointer">
+                <a href="#tips" className="block group">
                   <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-3 sm:mb-4 shadow-md md:shadow-none">
                     {/* Mobile image */}
                     <Image
@@ -83,7 +83,7 @@ export default function HoneyTips() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </span>
-                </article>
+                </a>
               </StaggerChild>
             ))}
           </StaggerContainer>

@@ -35,7 +35,7 @@ export default function Navbar() {
       }`}
       id="top"
     >
-      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-[60px] md:h-[76px] items-center justify-between">
           {/* Logo */}
           <Link href="#top" className="group shrink-0">
@@ -72,7 +72,7 @@ export default function Navbar() {
 
           {/* Mobile right icons */}
           <div className="lg:hidden flex items-center gap-1">
-            <button className="p-1.5 text-black" onClick={() => setMobileOpen(!mobileOpen)}>
+            <button className="p-1.5 text-black" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen}>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileOpen
                   ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

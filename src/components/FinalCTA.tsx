@@ -29,7 +29,9 @@ export default function FinalCTA() {
             ORDER FRESH HONEY
           </motion.a>
           <motion.a
-            href="#contact"
+            href="https://wa.me/919649641558?text=Hi%2C%20I%20want%20to%20order%20Vedaanth%20Honey"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center justify-center gap-2 px-9 py-4 bg-white text-black font-bold text-sm rounded-full hover:bg-white/90 transition-all tracking-[0.12em]"

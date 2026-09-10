@@ -56,7 +56,9 @@ export default function OurHoney() {
                   <div className="flex items-center justify-between mt-2 sm:mt-3">
                     <span className="text-lg sm:text-xl font-heading font-extrabold text-black">{p.price}</span>
                     <motion.a
-                      href="#contact"
+                      href={`https://wa.me/919649641558?text=Hi%2C%20I%20want%20to%20order%20${encodeURIComponent(p.name + ' ' + p.weight)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-8 h-8 sm:w-10 sm:h-10 bg-honey text-black rounded-full flex items-center justify-center hover:bg-honey-amber transition-colors shadow-md"
@@ -83,7 +85,9 @@ export default function OurHoney() {
             SHOP ALL HONEY
           </a>
           <a
-            href="#contact"
+            href="https://wa.me/919649641558?text=Hi%2C%20I%20want%20to%20order%20Vedaanth%20Honey"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3.5 bg-[#25D366] text-white font-bold text-[13px] rounded-full hover:bg-[#1fb855] transition-all tracking-[0.12em]"
           >
             ORDER ON WHATSAPP

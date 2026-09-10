@@ -46,7 +46,9 @@ export default function DeliverySection() {
 
         <FadeUp delay={0.3} className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <motion.a
-            href="#contact"
+            href="https://wa.me/919649641558?text=Hi%2C%20I%20want%20to%20order%20Vedaanth%20Honey"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(37,211,102,0.3)" }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#25D366] text-white font-bold text-xs rounded-full transition-all tracking-[0.12em]"
@@ -57,7 +59,7 @@ export default function DeliverySection() {
             ORDER ON WHATSAPP
           </motion.a>
           <motion.a
-            href="tel:+919876543210"
+            href="tel:+919649641558"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center justify-center px-8 py-3.5 bg-[#111] text-white font-bold text-xs rounded-full hover:bg-black transition-all tracking-[0.12em]"

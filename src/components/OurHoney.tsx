@@ -5,21 +5,23 @@ import { motion } from "framer-motion";
 import { FadeUp, StaggerContainer, StaggerChild } from "./animations";
 
 const products = [
-  { name: "RAW HONEY", weight: "250 g", price: "\u20B9399", tag: null, badge: "Multifloral", img: "/images/logo/jar-front-white.png" },
-  { name: "RAW HONEY", weight: "500 g", price: "\u20B9749", tag: "BESTSELLER", badge: "Multifloral", img: "/images/logo/jar-angle-white.png" },
-  { name: "RAW HONEY", weight: "1 kg", price: "\u20B91,498", tag: null, badge: "Multifloral", img: "/images/logo/jar-front-dark.png" },
+  { name: "RAW HONEY", weight: "250 g", price: "₹399", tag: null, desc: "Perfect to try.", badge: "Try Me", img: "/images/logo/jar-front-white.png" },
+  { name: "RAW HONEY", weight: "500 g", price: "₹749", tag: "MOST POPULAR", desc: "Our most popular size.", badge: "Bestseller", img: "/images/logo/jar-angle-white.png" },
+  { name: "RAW HONEY", weight: "1 kg", price: "₹1,498", tag: "BEST VALUE", desc: "Best value for daily use.", badge: "Family Jar", img: "/images/logo/jar-front-dark.png" },
+  { name: "GIFT BOX", weight: "Premium", price: "₹899", tag: null, desc: "A thoughtful gift of pure honey.", badge: "Gift Set", img: "/images/logo/jar-angle-dark.png" },
 ];
 
 export default function OurHoney() {
   return (
-    <section className="py-8 md:py-10 relative overflow-hidden" id="shop">
-
+    <section className="py-10 md:py-14 relative overflow-hidden" id="shop">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <FadeUp className="text-center mb-8">
           <h2 className="font-heading text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-black tracking-wide">
             OUR RAW HONEY
           </h2>
-          <p className="text-sm text-black/70 mt-3 font-medium">Unpasteurized · Unprocessed · Unfiltered · Multifloral Honey</p>
+          <p className="text-sm text-black/70 mt-3 font-medium max-w-lg mx-auto">
+            One honey, done right. Harvested from multiflowers and forest blossoms in the Chitradurga region, raw and unprocessed.
+          </p>
         </FadeUp>
 
         <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6 max-w-5xl mx-auto">
@@ -31,15 +33,15 @@ export default function OurHoney() {
                 className="bg-white rounded-3xl overflow-hidden group cursor-pointer relative border border-honey/15 shadow-sm"
               >
                 {p.tag && (
-                  <span className="absolute top-3 right-3 text-[9px] font-bold px-3 py-1 rounded-full z-10 text-black bg-honey shadow-md tracking-wider">
+                  <span className="absolute top-3 right-3 text-[8px] sm:text-[9px] font-bold px-2.5 py-1 rounded-full z-10 text-black bg-honey shadow-md tracking-wider">
                     {p.tag}
                   </span>
                 )}
 
-                <div className="relative h-44 sm:h-48 md:h-52 overflow-hidden bg-honey/5 rounded-t-3xl">
+                <div className="relative h-40 sm:h-48 md:h-52 overflow-hidden bg-honey/5 rounded-t-3xl">
                   <Image
                     src={p.img}
-                    alt={p.name}
+                    alt={`${p.name} ${p.weight} - Raw honey Chitradurga`}
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-700 p-2"
                     sizes="(max-width: 768px) 50vw, 25vw"
@@ -48,9 +50,9 @@ export default function OurHoney() {
 
                 <div className="p-3 sm:p-4 md:p-5">
                   <h3 className="font-bold text-[10px] sm:text-xs text-black tracking-widest group-hover:text-honey transition-colors leading-tight">
-                    {p.name}
+                    {p.name} — {p.weight}
                   </h3>
-                  <p className="text-[10px] sm:text-[11px] text-black/70 mt-1">{p.weight} · {p.badge}</p>
+                  <p className="text-[9px] sm:text-[11px] text-black/50 mt-1">{p.desc}</p>
                   <div className="flex items-center justify-between mt-2 sm:mt-3">
                     <span className="text-lg sm:text-xl font-heading font-extrabold text-black">{p.price}</span>
                     <motion.a
@@ -58,7 +60,7 @@ export default function OurHoney() {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-8 h-8 sm:w-10 sm:h-10 bg-honey text-black rounded-full flex items-center justify-center hover:bg-honey-amber transition-colors shadow-md"
-                      aria-label={`Order ${p.name}`}
+                      aria-label={`Order ${p.name} ${p.weight}`}
                     >
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="9" cy="21" r="1" />
@@ -73,12 +75,18 @@ export default function OurHoney() {
           ))}
         </StaggerContainer>
 
-        <FadeUp delay={0.3} className="text-center mt-8">
+        <FadeUp delay={0.3} className="text-center mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a
             href="#shop"
-            className="inline-flex items-center px-10 py-3.5 bg-white border-2 border-black text-black font-bold text-[13px] rounded-full hover:bg-honey hover:border-honey transition-all tracking-[0.12em]"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-white border-2 border-black text-black font-bold text-[13px] rounded-full hover:bg-honey hover:border-honey transition-all tracking-[0.12em]"
           >
-            VIEW ALL PRODUCTS
+            SHOP ALL HONEY
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-[#25D366] text-white font-bold text-[13px] rounded-full hover:bg-[#1fb855] transition-all tracking-[0.12em]"
+          >
+            ORDER ON WHATSAPP
           </a>
         </FadeUp>
       </div>

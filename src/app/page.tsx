@@ -7,8 +7,8 @@ import OurHoney from "@/components/OurHoney";
 import HivesToHome from "@/components/HivesToHome";
 import OurStory from "@/components/OurStory";
 import DeliverySection from "@/components/DeliverySection";
-import HowToOrder from "@/components/HowToOrder";
-import HoneyTips from "@/components/HoneyTips";
+import FAQ from "@/components/FAQ";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 /* Mobile-only full-width image banner between sections */
@@ -52,7 +52,7 @@ export default function Home() {
       </div>
 
       {/* Mobile banner: multiflora honey between sections */}
-      <MobileBanner src="/images/mobile/multiflora-mobile.webp" alt="Multiflora honey" />
+      <MobileBanner src="/images/mobile/multiflora-mobile.webp" alt="Raw honey harvested in Chitradurga" />
 
       {/* HivesToHome + OurStory with shared background */}
       <div className="relative bg-no-repeat section-bg-3">
@@ -61,16 +61,16 @@ export default function Home() {
         <OurStory />
       </div>
 
-      {/* Mobile banner: litchi honey image */}
-      <MobileBanner src="/images/mobile/litchi-mobile.webp" alt="Litchi honey" />
+      {/* Mobile banner */}
+      <MobileBanner src="/images/mobile/litchi-mobile.webp" alt="Chitradurga honey harvest" />
 
       <DeliverySection />
 
-      {/* Mobile banner: forest honey image */}
-      <MobileBanner src="/images/mobile/forest-mobile.webp" alt="Forest honey" />
+      {/* Mobile banner */}
+      <MobileBanner src="/images/mobile/forest-mobile.webp" alt="Pure raw honey Karnataka" />
 
-      <HowToOrder />
-      <HoneyTips />
+      <FAQ />
+      <FinalCTA />
       <Footer />
     </>
   );

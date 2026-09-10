@@ -17,10 +17,11 @@ export default function Navbar() {
 
   const links = [
     { label: "HOME", href: "#top", active: true },
-    { label: "OUR STORY", href: "#story" },
-    { label: "SHOP", href: "#shop" },
-    { label: "HONEY TIPS", href: "#tips" },
-    { label: "CONTACT US", href: "#contact" },
+    { label: "OUR HONEY", href: "#shop" },
+    { label: "HOW WE HARVEST", href: "#hives" },
+    { label: "REVIEWS", href: "#reviews" },
+    { label: "FAQ", href: "#faq" },
+    { label: "CONTACT", href: "#contact" },
   ];
 
   return (
@@ -66,7 +67,7 @@ export default function Navbar() {
               href="#shop"
               className="px-7 py-3 bg-honey text-black text-[14px] font-bold rounded-full hover:bg-honey-amber transition-colors tracking-wider btn-shine"
             >
-              SHOP NOW
+              ORDER NOW
             </a>
           </div>
 
@@ -92,7 +93,7 @@ export default function Navbar() {
                   <Link href={item.href} className={`block py-2 text-[14px] tracking-[0.06em] ${item.active ? "text-black font-semibold" : "text-black/60 font-medium hover:text-honey"}`} onClick={() => setMobileOpen(false)}>{item.label}</Link>
                 </motion.div>
               ))}
-              <a href="#shop" className="inline-block mt-3 px-6 py-2.5 bg-honey text-black text-[13px] font-bold rounded-full tracking-wider" onClick={() => setMobileOpen(false)}>SHOP NOW</a>
+              <a href="#shop" className="inline-block mt-3 px-6 py-2.5 bg-honey text-black text-[13px] font-bold rounded-full tracking-wider" onClick={() => setMobileOpen(false)}>ORDER NOW</a>
             </div>
           </motion.div>
         )}

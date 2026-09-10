@@ -6,7 +6,7 @@ import { StaggerContainer, StaggerChild } from "./animations";
 export default function StatsBar() {
   const stats = [
     {
-      num: "300+",
+      num: "500+",
       label: "Happy Families",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFB000" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -17,7 +17,7 @@ export default function StatsBar() {
     },
     {
       num: "100%",
-      label: "Pure Honey",
+      label: "Raw & Unheated",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFB000" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/>
@@ -27,8 +27,8 @@ export default function StatsBar() {
       ),
     },
     {
-      num: "3+",
-      label: "Bee Farms",
+      num: "1",
+      label: "Single Origin",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFB000" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 3h6v6l4 8H5l4-8V3z"/>
@@ -38,8 +38,8 @@ export default function StatsBar() {
       ),
     },
     {
-      num: "24hrs",
-      label: "From Hive to You",
+      num: "FREE",
+      label: "Delivery Karnataka",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFB000" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10"/>

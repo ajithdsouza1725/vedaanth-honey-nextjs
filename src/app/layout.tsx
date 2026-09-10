@@ -9,9 +9,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Vedaanth Nectar Honey — Pure Raw Honey in Bangalore",
+  title: "Raw Honey in Karnataka | Pure & Unheated | Vedaanth Nectar Honey",
   description:
-    "Straight from our farms to your home. Experience the pure taste of nature's golden nectar. Order fresh, raw honey delivered across Bangalore.",
+    "Buy 100% pure raw honey in Karnataka — harvested in the Chitradurga hills, never heated, lab-tested for purity. ✓ Free delivery ✓ No COD ✓ Order on WhatsApp.",
 };
 
 export const viewport: Viewport = {

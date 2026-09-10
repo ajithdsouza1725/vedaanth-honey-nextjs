@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import { FadeUp, StaggerContainer, StaggerChild } from "./animations";
 
 const products = [
-  { name: "RAW HONEY", weight: "500 g", price: "\u20B9599", tag: "BESTSELLER", badge: "Multifloral", img: "/images/logo/jar-front-white.png" },
-  { name: "RAW HONEY", weight: "500 g", price: "\u20B9599", tag: null, badge: "Unpasteurized", img: "/images/logo/jar-angle-white.png" },
-  { name: "RAW HONEY", weight: "500 g", price: "\u20B9599", tag: null, badge: "Unfiltered", img: "/images/logo/jar-front-dark.png" },
-  { name: "RAW HONEY", weight: "500 g", price: "\u20B9599", tag: null, badge: "Unprocessed", img: "/images/logo/jar-angle-dark.png" },
+  { name: "RAW HONEY", weight: "250 g", price: "\u20B9399", tag: null, badge: "Multifloral", img: "/images/logo/jar-front-white.png" },
+  { name: "RAW HONEY", weight: "500 g", price: "\u20B9749", tag: "BESTSELLER", badge: "Multifloral", img: "/images/logo/jar-angle-white.png" },
+  { name: "RAW HONEY", weight: "1 kg", price: "\u20B91,498", tag: null, badge: "Multifloral", img: "/images/logo/jar-front-dark.png" },
 ];
 
 export default function OurHoney() {
